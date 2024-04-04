@@ -1,6 +1,7 @@
 package com.grupo2;
 
 public class Video {
+    private int numColuna;
     private String claim_Status;
     private int video_id;
     private int video_duration_sec;
@@ -13,9 +14,10 @@ public class Video {
     private int video_download_count;
 
     
-    public Video(String claim_Status, int video_id, int video_duration_sec, String video_transcription_text,
+    public Video(int numColuna, String claim_Status, int video_id, int video_duration_sec, String video_transcription_text,
             String verified_status, String author_ban_status, int video_view_count, int video_like_count,
             int video_share_count, int video_download_count, int video_comment_count) {
+        this.numColuna = numColuna;
         this.claim_Status = claim_Status;
         this.video_id = video_id;
         this.video_duration_sec = video_duration_sec;
@@ -118,6 +120,15 @@ public class Video {
     }
 
     private int video_comment_count;
+
+
+    public int getNumColuna() {
+        return numColuna;
+    }
+
+    public void setNumColuna(int numColuna) {
+        this.numColuna = numColuna;
+    }
 
     
 }
